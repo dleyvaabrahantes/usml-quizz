@@ -1,5 +1,6 @@
 from flask import Flask, render_template, jsonify
 import json
+import os
 
 app = Flask(__name__)
 
@@ -19,4 +20,7 @@ def index():
     return render_template('index.html')
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    # Usar el puerto de Render o el 5000 por defecto
+    port = int(os.environ.get("PORT", 5000))
+    # Configurar host como 0.0.0.0 para que sea accesible externamente
+    app.run(host="0.0.0.0", port=port, debug=True)
