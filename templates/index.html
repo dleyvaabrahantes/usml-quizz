@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div id="quiz-container">
+        <div id="quiz-header">
+            <h1>Bienvenido al Quiz</h1>
+            <p>Responde las preguntas una a una</p>
+        </div>
+        <div id="question-container">
+            <!-- Las preguntas se cargarán aquí dinámicamente -->
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
